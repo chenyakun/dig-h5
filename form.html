@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'
+<title>HTML5 Form</title>
+<style>
+	#fileinput{
+		display:none;
+	}
+</style>
+</head>
+<body>
+  <div id="bin"></div>
+  <form>
+  <label for='name'>Name <em>*</em></label>
+  <input id='name' placeholder='codinglion' autofocus><br>
+  <label for='telephone'>Telephone</label>
+  <input type='tel' id='telephone' placeholder='xxx-xxx-xxxxx'><br>
+  <label for='promoCode'>Promotion Code</label>
+  <input id='promoCode' placeholder='ABC-142' title='xxxxxxx xx'
+ pattern="[a-zA-Z]{3}-[0-9]{3}"></br>
+  
+ <label for='mail'>mail</label>
+  <input type='email' id='email' placeholder='xxx-xxx-xxxxx'><br>
+ 
+  <label for='url'>url</label>
+  <input type='url' id='url' placeholder='xxx-xxx-xxxxx'><br>
+  
+  <label for='number'>number</label>
+  <input type='number' id='number' placeholder='xxx-xxx-xxxxx'><br>
+  
+  <label for='search'>search</label>
+  <input type='search' id='search' placeholder='xxx-xxx-xxxxx'><br>
+  
+  <label for='number'>number</label>
+  <input type='number' min='0' max='100' id='number' step='1'> <br>
+ 
+  <label for='range'>range</label>
+  <input type='range' id='range' min='1' max='100'><br>
+
+  <label for='date'>date</label>
+  <input type='date' id='date' min='1900-01-01' max='2200-01-01'>
+ 
+  <label for='file'>file</label>
+  <input type='file' id='fileinput'><br>
+  
+  <button>upload a file</button></br>
+	
+  
+  <a href='http://www.baidu.com'>baidu.com</a>
+  
+  
+  <script>
+	document.getElementsByTagName('button')[0].addEventListener('click',
+			function(){
+				alert('i have hidden the file input elemnt, too ugly! now use a button by myself.');
+				var fileinput = document.getElementById('fileinput');
+				fileinput.click();
+
+				// 模拟自动点击
+				var tobaidu = document.getElementsByTagName('a')[0];
+				tobaidu.click();
+			},false);
+  </script>
+
+
+
+
+  <datalist>
+	<option label='labelA' value='vA'>
+	<option label='labelB' value='vB'>
+  </datalist>
+  </form>
+</body>
+</html>

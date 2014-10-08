@@ -11,7 +11,7 @@ section, header, footer {
 }
 
 #wrapper {
-  width: 600px;
+  width: 90%;
   margin: 0 auto;
   background: #fff url(../images/shade.jpg) repeat-x center bottom;
   -moz-border-radius: 10px;
@@ -19,6 +19,7 @@ section, header, footer {
   border-radius: 10px;
   border-top: 1px solid #fff;
   padding-bottom: 76px;
+  shadow-box: 5px 5px 8px 5px #ccc;
 }
 
 h1 {
