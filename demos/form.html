@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html5 form</title>
+</head>
+<body>
+	<form action="">
+		<fieldset>
+			<legend>new attributes</legend>
+			<p>
+				<label>required:</label>
+				<input type="text" name="h5required" required>
+				<small>works in opera</small>
+			</p>
+			<p>
+				<label for="">AutoFocus:</label>
+				<input type="text" name="h5autofocus" autofocus="true">
+				<small>Works in Opera & Chrome</small>
+			</p>
+			<p>
+				<label for="">PlaceHolder:</label>
+				<input type="text" name="h5placeHolder" placeholder="this placeholder">
+				<small>Works in Opera & Chrome</small>
+			</p>
+			<p>
+				<label for="">input pattern:</label>
+				<input type="text" pattern="[0-9][A-Z]{3}" required title="\d[A-Z]{3}">
+				<small>Works in Opera & Chrome</small>
+			</p>
+			<p>
+				<label for="">MultipleFiles: </label>
+				<input type="file" multiple>
+				<small>Works in Opera & Chrome</small>
+			</p>
+			<p>
+				<label for="">List: </label>
+				<input type="text" list="colors">
+				<datalist id="colors">
+					<option value="Red"></option>
+					<option value="Green"></option>
+					<option value="Blue"></option>
+				</datalist>
+				<small>Works in Opera & Chrome</small>
+			</p>
+		</fieldset>
+
+		<fieldset>
+			<legend>New Input types</legend>
+			<p>
+				<label for="">Email:</label>
+				<input type="email" name="h5email">
+				<small>Some Words</small>
+			</p>
+			<p>
+				<label for="url">URL:</label>
+				<input type="url" name="url">
+				<small>Some Words</small>
+			</p>
+			<p>
+				<label for="h5number">Number:</label>
+				<input type="Number" name="h5number" min="1" max="100" step="1" value="22">
+				<small>Some Words</small>
+			</p>
+			<p>
+				<label for="h5range">Range:</label>
+				<input type="range" name="h5range" min="-100" max="100" value="30" step="10">
+				<small>Some Words</small>
+			</p>
+			<p>
+				<label for="h5time">Time:</label>
+				<input type="time" name="h5time" step="900">
+				<small>Some Words</small>
+			</p>
+			<p>
+				<label for="h5date">Date:</label>
+				<input type="date">
+				<small>Some Words</small>
+			</p>
+			<p>
+				<label for="">Month:</label>
+				<input type="month">
+				<small>Some Words</small>
+			</p>
+			</p>
+			<p>
+				<label for="">Week:</label>
+				<input type="week">
+				<small>Some Words</small>
+			</p>
+			</p>
+			<p>
+				<label for="">DateTime:</label>
+				<input type="datetime">
+				<small>Some Words</small>
+			</p>
+		</fieldset>
+		<div><button>submit</button></div>
+	</form>
+</body>
+</html>
