@@ -2,7 +2,7 @@
     <article></article>
 <script>
 
-buildSpinner({ x : 50, y : 50, size : 20, degrees : 30 });
+buildSpinner({ x : 50, y : 50, size : 30, degrees : 16 });
 
 function buildSpinner(data) {
   
@@ -10,8 +10,12 @@ function buildSpinner(data) {
   canvas.height = 100;
   canvas.width = 300;
   document.getElementsByTagName('article')[0].appendChild(canvas);
+
   var ctx = canvas.getContext("2d"),
-    i = 0, degrees = data.degrees, loops = 0, degreesList = [];
+      i = 0, 
+	  degrees = data.degrees, 
+	  loops = 10, 
+	  degreesList = [];
     
   for (i = 0; i < degrees; i++) {
     degreesList.push(i);
