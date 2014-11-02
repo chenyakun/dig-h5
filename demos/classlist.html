@@ -26,7 +26,6 @@
 }
 </style>
 <article>
-  <p>Clicking the buttons below will toggle the class on the <em>bacon ipsum</em> text below, assigning the class with the same name (styles seen below). This is done using the new <code>classList</code> API.</p>
 
   <p id="status">Not supported :(</p> 
   
@@ -36,10 +35,20 @@
 		  .bold { font-weight: bold; }
 		  .pink { background: #FF5E99; color: #fff; }
 	  &lt;/style&gt;
+	 
+	  div.classList.add("annotherClass");
+	  div.classList.remove("currentClass");
+	  
+	  // if visible is set remove it, otherwith add it.
+	  div.classList.toggle("visible");
+
+	  div.class.add("foo","bar");
+
+	  div.classList.contains("foo");
   </code></pre>
 
 
-    <p id="classListTest">Bacon ipsum dolor -tip, chicken venison strip steak.</p>
+    <p id="classListTest">Hello world.</p>
 
     <p id="toggleClass">Toggle a class: 
       <input type="button" value="big" />
@@ -56,12 +65,23 @@ var toggle = document.getElementById('toggleClass'),
 if (toggle.classList) {
   var supported = document.getElementById('status');
   supported.parentNode.removeChild(supported);
-  // bit of event delegation otherwise we're binding to each input
+  
   toggle.addEventListener('click', function (event) {
     if (event.target.nodeName == 'INPUT') {
+		
+	  // div.class.add("foo","bar");
+	  // if have remove it ,otherwise add it.
       test.classList.toggle(event.target.value);
+	  alert(event.target.value+
+		" exist ? " +
+		test.classList.contains(event.target.value))
     }
   }, false);
+
+  // test.classList.add("annotherClass");
+  // div.classList.remove("currentClass");
+  // div.classList.contains("foo");
+
 } else {
   // not supported
 }
